@@ -3,16 +3,41 @@ body{
     color:  white;
 }
 
-header{
+h1{
     text-align: center;
-    font-size: 40px;
+    font-size: 60px;
     margin: 20px 0;
     transition: color 0.5s ease;
     transition: transform 0.5s ease-in-out;
+    color: azure;
+    text-decoration: underline;
 }
 
-header:hover{
+h1:hover{
     cursor: pointer;
-    color: #b8d8ed;
+    color: #ffffff;
     transform: scale(1.1);
+}
+
+nav{
+    background-color: rgba(0, 0, 0, 0.549);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    height: 50px;
+    padding: 10PX;
+    text-align: center;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    
+    transition: color 0.5s;
+    
+}
+
+nav a:hover{
+    color: #b8d8ed;
 }
