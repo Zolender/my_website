@@ -73,6 +73,55 @@
             margin: 1rem 0;
             animation: fadeIn 1s;
         }
+
+        .cross-btn {
+    position: fixed;
+    top: 20px; /* Adjust as needed */
+    right: 20px;
+    width: 30px; /* Smaller size */
+    height: 30px;
+    background-color: rgba(182, 202, 201, 0.7); /* Red with transparency */
+    border: none;
+    border-radius: 50%; /* Circular button */
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    z-index: 100;
+}
+
+.cross-btn:hover {
+    transform: scale(1.05); /* Slightly enlarges the button on hover */
+    background-color: rgba(194, 178, 178, 0.9); /* Darker red on hover */
+}
+
+
+
+
+@media (max-width: 700px) {
+    .cross-btn {
+        width: 25px; 
+        height: 25px;
+        top: 10px;
+        right: 10px;
+    }
+}
+
+/* Cross Icon (inside the button) */
+.cross-btn::before, .cross-btn::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg); 
+}
+
+.cross-btn::after {
+    transform: translate(-50%, -50%) rotate(-45deg); 
+}
+
         
         /* Animations */
         @keyframes fadeIn {
@@ -191,6 +240,10 @@
     
 </head>
 <body>
+    <nav>
+        <a href="index.html"><button class="cross-btn"> </button></a>
+    </nav>
+    
     <header>
         <h1>History of Chad</h1>
         <h2>A Journey Through Time</h2>
